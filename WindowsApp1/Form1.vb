@@ -7,7 +7,8 @@ Imports System.Text
 Public Class Form1
     Dim conn As NpgsqlConnection
     Dim chaveErro As String
-    Dim Conexao As String
+    Dim Conexao1 As String
+    Dim Conexao2 As String
     Dim StrLog As String
     Dim NoLinhas As String
     Dim msg As MessageBox
@@ -31,10 +32,11 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Conexao = "Server=" + Servidor.Text + ";Port=5432;UserId=" + Usuario.Text + ";Password=" + Senha.Text + ";Database=" + database.Text & ";Timeout=1024;CommandTimeout=3600;"
+        Conexao1 = "Server=" + Servidor.Text + ";Port=5432;UserId=" + Usuario.Text + ";Password=" + Senha.Text + ";Database=" + database.Text & ";Timeout=1024;CommandTimeout=3600;"
+        Conexao2 = "Server=" + Servidor.Text + ";Port=5432;UserId=" + Usuario.Text + ";Password=" + Senha.Text + ";Database=" + database.Text & ";Timeout=1024;CommandTimeout=3600;"
         StrEmpresa = Empresa.Text
 
-        conn = New NpgsqlConnection(Conexao)
+        conn = New NpgsqlConnection(Conexao1)
         Try
             conn.Open()
             If (conn.State = ConnectionState.Open) Then
@@ -144,7 +146,7 @@ Public Class Form1
         Dim ds As New DataSet()
         Dim da As NpgsqlDataAdapter
         Dim StringSQL As String
-        ConsultaMaiorChave = New NpgsqlConnection(Conexao)
+        ConsultaMaiorChave = New NpgsqlConnection(Conexao1)
         Try
             ConsultaMaiorChave.Open()
 
@@ -197,6 +199,27 @@ Public Class Form1
             conn.Close()
         End If
     End Sub
+    'SELECT schemaname,relname,n_live_tup 
+    'FROM pg_stat_user_tables 
+    'where schemaname = 'ep001'-- and relname='es_tbsaldos'
+    'And n_live_tup > 0
+    'ORDER BY relname;
+
+    ' Selec* From ep001.es_tbsaldos
+
+
+    'Select Case column_name from information_schema.columns
+    'where table_schema ='ep003' and table_name='es_tbsaldos'
+
+
+    'INSERT INTO ep001.es_tbmarcas (codigo_mar,descri_mar,regfab_mar,operad_mar,dcadas_mar,filial_mar,export_drv,dalter_sis,pcomis_mar,pdesco_mar,mlucro_mar)
+    '   Select Case codigo_sco, descri_sco, null, operad_sco, dcadas_sco, filial_sco,export_drv,dalter_sis,null,null,null from ep001.es_tblsecao
+    'On CONFLICT (codigo_mar) DO UPDATE SET 
+    '  (codigo_mar,descri_mar,regfab_mar,operad_mar,dcadas_mar,filial_mar,export_drv,dalter_sis,pcomis_mar,pdesco_mar,mlucro_mar)=(EXCLUDED.codigo_mar,EXCLUDED.descri_mar,EXCLUDED.regfab_mar,EXCLUDED.operad_mar,EXCLUDED.dcadas_mar,EXCLUDED.filial_mar,EXCLUDED.export_drv,EXCLUDED.dalter_sis,EXCLUDED.pcomis_mar,EXCLUDED.pdesco_mar,EXCLUDED.mlucro_mar);
+
+
+
+
 End Class
 
 
