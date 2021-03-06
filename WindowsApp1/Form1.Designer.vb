@@ -26,7 +26,7 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Empresa = New System.Windows.Forms.TextBox()
+        Me.Empresa1 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Repeticoes = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -38,25 +38,29 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.database = New System.Windows.Forms.TextBox()
-        Me.Senha = New System.Windows.Forms.TextBox()
-        Me.Usuario = New System.Windows.Forms.TextBox()
-        Me.Servidor = New System.Windows.Forms.TextBox()
+        Me.database1 = New System.Windows.Forms.TextBox()
+        Me.Senha1 = New System.Windows.Forms.TextBox()
+        Me.Usuario1 = New System.Windows.Forms.TextBox()
+        Me.Servidor1 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Empresa2 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Database2 = New System.Windows.Forms.TextBox()
+        Me.Senha2 = New System.Windows.Forms.TextBox()
+        Me.Usuario2 = New System.Windows.Forms.TextBox()
+        Me.servidor2 = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Listar = New System.Windows.Forms.Button()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Transferir = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label11
@@ -95,12 +99,12 @@ Partial Class Form1
         Me.Label8.TabIndex = 40
         Me.Label8.Text = "0"
         '
-        'Empresa
+        'Empresa1
         '
-        Me.Empresa.Location = New System.Drawing.Point(96, 135)
-        Me.Empresa.Name = "Empresa"
-        Me.Empresa.Size = New System.Drawing.Size(100, 20)
-        Me.Empresa.TabIndex = 39
+        Me.Empresa1.Location = New System.Drawing.Point(96, 135)
+        Me.Empresa1.Name = "Empresa1"
+        Me.Empresa1.Size = New System.Drawing.Size(100, 20)
+        Me.Empresa1.TabIndex = 39
         '
         'Label7
         '
@@ -145,7 +149,7 @@ Partial Class Form1
         '
         'Log
         '
-        Me.Log.Location = New System.Drawing.Point(548, 12)
+        Me.Log.Location = New System.Drawing.Point(885, 12)
         Me.Log.Name = "Log"
         Me.Log.Size = New System.Drawing.Size(290, 438)
         Me.Log.TabIndex = 33
@@ -196,33 +200,33 @@ Partial Class Form1
         Me.Label1.TabIndex = 28
         Me.Label1.Text = "Servidor:"
         '
-        'database
+        'database1
         '
-        Me.database.Location = New System.Drawing.Point(96, 109)
-        Me.database.Name = "database"
-        Me.database.Size = New System.Drawing.Size(100, 20)
-        Me.database.TabIndex = 27
+        Me.database1.Location = New System.Drawing.Point(96, 109)
+        Me.database1.Name = "database1"
+        Me.database1.Size = New System.Drawing.Size(100, 20)
+        Me.database1.TabIndex = 27
         '
-        'Senha
+        'Senha1
         '
-        Me.Senha.Location = New System.Drawing.Point(96, 83)
-        Me.Senha.Name = "Senha"
-        Me.Senha.Size = New System.Drawing.Size(100, 20)
-        Me.Senha.TabIndex = 26
+        Me.Senha1.Location = New System.Drawing.Point(96, 83)
+        Me.Senha1.Name = "Senha1"
+        Me.Senha1.Size = New System.Drawing.Size(100, 20)
+        Me.Senha1.TabIndex = 26
         '
-        'Usuario
+        'Usuario1
         '
-        Me.Usuario.Location = New System.Drawing.Point(96, 57)
-        Me.Usuario.Name = "Usuario"
-        Me.Usuario.Size = New System.Drawing.Size(100, 20)
-        Me.Usuario.TabIndex = 25
+        Me.Usuario1.Location = New System.Drawing.Point(96, 57)
+        Me.Usuario1.Name = "Usuario1"
+        Me.Usuario1.Size = New System.Drawing.Size(100, 20)
+        Me.Usuario1.TabIndex = 25
         '
-        'Servidor
+        'Servidor1
         '
-        Me.Servidor.Location = New System.Drawing.Point(96, 31)
-        Me.Servidor.Name = "Servidor"
-        Me.Servidor.Size = New System.Drawing.Size(100, 20)
-        Me.Servidor.TabIndex = 24
+        Me.Servidor1.Location = New System.Drawing.Point(96, 31)
+        Me.Servidor1.Name = "Servidor1"
+        Me.Servidor1.Size = New System.Drawing.Size(100, 20)
+        Me.Servidor1.TabIndex = 24
         '
         'Button2
         '
@@ -235,7 +239,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(121, 212)
+        Me.Button1.Location = New System.Drawing.Point(139, 203)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 22
@@ -251,12 +255,12 @@ Partial Class Form1
         Me.Label12.TabIndex = 44
         Me.Label12.Text = "Origem"
         '
-        'TextBox1
+        'Empresa2
         '
-        Me.TextBox1.Location = New System.Drawing.Point(415, 135)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 54
+        Me.Empresa2.Location = New System.Drawing.Point(415, 135)
+        Me.Empresa2.Name = "Empresa2"
+        Me.Empresa2.Size = New System.Drawing.Size(100, 20)
+        Me.Empresa2.TabIndex = 54
         '
         'Label13
         '
@@ -303,33 +307,33 @@ Partial Class Form1
         Me.Label17.TabIndex = 49
         Me.Label17.Text = "Servidor:"
         '
-        'TextBox2
+        'Database2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(415, 109)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 48
+        Me.Database2.Location = New System.Drawing.Point(415, 109)
+        Me.Database2.Name = "Database2"
+        Me.Database2.Size = New System.Drawing.Size(100, 20)
+        Me.Database2.TabIndex = 48
         '
-        'TextBox3
+        'Senha2
         '
-        Me.TextBox3.Location = New System.Drawing.Point(415, 83)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 47
+        Me.Senha2.Location = New System.Drawing.Point(415, 83)
+        Me.Senha2.Name = "Senha2"
+        Me.Senha2.Size = New System.Drawing.Size(100, 20)
+        Me.Senha2.TabIndex = 47
         '
-        'TextBox4
+        'Usuario2
         '
-        Me.TextBox4.Location = New System.Drawing.Point(415, 57)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 46
+        Me.Usuario2.Location = New System.Drawing.Point(415, 57)
+        Me.Usuario2.Name = "Usuario2"
+        Me.Usuario2.Size = New System.Drawing.Size(100, 20)
+        Me.Usuario2.TabIndex = 46
         '
-        'TextBox5
+        'servidor2
         '
-        Me.TextBox5.Location = New System.Drawing.Point(415, 31)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 45
+        Me.servidor2.Location = New System.Drawing.Point(415, 31)
+        Me.servidor2.Name = "servidor2"
+        Me.servidor2.Size = New System.Drawing.Size(100, 20)
+        Me.servidor2.TabIndex = 45
         '
         'Label18
         '
@@ -350,29 +354,70 @@ Partial Class Form1
         Me.CheckBox1.Text = "Mesma Base"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'Listar
+        '
+        Me.Listar.Location = New System.Drawing.Point(250, 203)
+        Me.Listar.Name = "Listar"
+        Me.Listar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Listar.Size = New System.Drawing.Size(75, 23)
+        Me.Listar.TabIndex = 57
+        Me.Listar.Text = "Listar"
+        Me.Listar.UseVisualStyleBackColor = True
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(551, 12)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
+        Me.ListBox1.Size = New System.Drawing.Size(301, 446)
+        Me.ListBox1.TabIndex = 58
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(390, 237)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(45, 13)
+        Me.Label19.TabIndex = 59
+        Me.Label19.Text = "Label19"
+        '
+        'Transferir
+        '
+        Me.Transferir.Location = New System.Drawing.Point(371, 203)
+        Me.Transferir.Name = "Transferir"
+        Me.Transferir.Size = New System.Drawing.Size(70, 23)
+        Me.Transferir.TabIndex = 60
+        Me.Transferir.Text = "Transferir"
+        Me.Transferir.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(850, 482)
+        Me.ClientSize = New System.Drawing.Size(1196, 482)
+        Me.Controls.Add(Me.Transferir)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.Listar)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Empresa2)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.Database2)
+        Me.Controls.Add(Me.Senha2)
+        Me.Controls.Add(Me.Usuario2)
+        Me.Controls.Add(Me.servidor2)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Empresa)
+        Me.Controls.Add(Me.Empresa1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Repeticoes)
         Me.Controls.Add(Me.Label6)
@@ -384,10 +429,10 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.database)
-        Me.Controls.Add(Me.Senha)
-        Me.Controls.Add(Me.Usuario)
-        Me.Controls.Add(Me.Servidor)
+        Me.Controls.Add(Me.database1)
+        Me.Controls.Add(Me.Senha1)
+        Me.Controls.Add(Me.Usuario1)
+        Me.Controls.Add(Me.Servidor1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
@@ -401,7 +446,7 @@ Partial Class Form1
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Empresa As TextBox
+    Friend WithEvents Empresa1 As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Repeticoes As TextBox
     Friend WithEvents Label6 As Label
@@ -413,23 +458,27 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents database As TextBox
-    Friend WithEvents Senha As TextBox
-    Friend WithEvents Usuario As TextBox
-    Friend WithEvents Servidor As TextBox
+    Friend WithEvents database1 As TextBox
+    Friend WithEvents Senha1 As TextBox
+    Friend WithEvents Usuario1 As TextBox
+    Friend WithEvents Servidor1 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Empresa2 As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Database2 As TextBox
+    Friend WithEvents Senha2 As TextBox
+    Friend WithEvents Usuario2 As TextBox
+    Friend WithEvents servidor2 As TextBox
     Friend WithEvents Label18 As Label
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Listar As Button
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Transferir As Button
 End Class
