@@ -282,24 +282,41 @@ Public Class Form1
     End Function
 
     Private Sub Transferir_Click(sender As Object, e As EventArgs) Handles Transferir.Click
-        Dim BuscaTabelas As NpgsqlConnection
-        Dim TT As New DataTable
+        Dim BuscaColunas As NpgsqlConnection
+        Dim ds As New DataSet()
         Dim da As NpgsqlDataAdapter
         Dim StringSQL As String
-        Dim row_v As DataRowView
+        Dim StringColunas As String
+        Dim StringMerge As String
         Dim row As DataRow
-        Dim itemName As String
+        Dim nomeTabela As String
 
-        For i = 0 To ListBox1.SelectedItems.Count - 1
-            row_v = ListBox1.SelectedItem
-            row = row_v.Row
-            itemName = row(0).ToString()
+        For Each SelectedItem As DataRowView In ListBox1.SelectedItems
+            row = SelectedItem.Row
+            nomeTabela = row(0).ToString()
 
-        Next i
 
-        BuscaTabelas = New NpgsqlConnection(Conexao2)
-        StringSQL = "Select Case column_name from information_schema.columns "
-        StringSQL = StringSQL & "where table_schema =" & StrEmpresa2 & " and table_name=" & es_tbsaldos
+            BuscaColunas = New NpgsqlConnection(Conexao2)
+            StringSQL = "Select column_name||',' column_name from information_schema.columns "
+            StringSQL = StringSQL & "where table_schema ='" & StrEmpresa2 & "' and table_name='" & nomeTabela & "' "
+
+            da = New NpgsqlDataAdapter(StringSQL, BuscaColunas)
+            Dim TT As New DataTable
+            da.Fill(TT)
+
+            Dim row2 As DataRow
+            For Each row2 In TT.Rows
+                StringColunas = StringColunas & row2(0).ToString
+            Next
+            StringColunas = StringColunas.Substring(0, StringColunas.Length - 1)
+            StringMerge = "INSERT INTO " & StrEmpresa2 & "." & nomeTabela & "( " & StringColunas & " )"
+            StringMerge += "SELECT" & StringColunas & " FROM " & StrEmpresa1 & "." & nomeTabela
+            StringMerge += " ON CONFLICT "
+
+            MsgBox(StringColunas)
+        Next
+
+
     End Sub
 
     'SELECT schemaname,relname,n_live_tup 
